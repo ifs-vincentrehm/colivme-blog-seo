@@ -51,9 +51,7 @@ export default {
         // Doc: https://github.com/nuxt-community/dotenv-module
         '@nuxtjs/dotenv',
         // Doc: https://github.com/nuxt-community/svg-module
-        '@nuxtjs/svg',
-        // Doc: https://github.com/nuxt-community/dotenv-module
-        '@nuxtjs/dotenv'
+        '@nuxtjs/svg'
     ],
     /*
      ** Nuxt.js modules
