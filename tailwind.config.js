@@ -14,6 +14,8 @@ module.exports = {
         './.nuxt/**/*.html',
         './.nuxt/**/*.vue',
         './.nuxt/**/*.js',
+        './dist/**/*.html',
+        './dist/**/*.js'
     ],
     theme: {
         extend: {
