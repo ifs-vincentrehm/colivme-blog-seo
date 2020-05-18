@@ -79,7 +79,7 @@ export default {
     },
     webfontloader: {
         google: {
-            families: ['Inter']
+            families: ['Inter&display=swap']
         }
     },
     /*
