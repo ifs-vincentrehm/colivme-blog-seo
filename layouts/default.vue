@@ -6,9 +6,7 @@
 
 <style>
 html {
-  @font-face {
-    font-family: 'Inter';
-    font-display: swap;
-  }
+  font-family: 'Inter';
+  font-display: swap;
 }
 </style>
