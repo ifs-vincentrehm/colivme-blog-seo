@@ -1,13 +1,13 @@
 <template>
-  <the-navbar />
+  <home-header-cta />
 </template>
 
 <script>
-import TheNavbar from '~/components/TheNavbar.vue'
+import HomeHeaderCta from '~/components/HomeHeaderCta.vue'
 
 export default {
   components: {
-    TheNavbar
+    HomeHeaderCta
   }
 }
 </script>
