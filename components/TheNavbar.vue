@@ -21,7 +21,7 @@
         <!-- Navbar links -->
         <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-end">
           <!-- Colivme logo -->
-          <div class="flex-shrink-0 lg:flex-1 flex items-center">
+          <div class="flex-shrink-0 flex flex-none lg:flex-1 items-center">
             <img class="block lg:hidden h-8 w-auto" src="/img/logos/logo-colivme-web.svg" alt="Workflow logo" />
             <img class="hidden lg:block h-8 w-auto" src="/img/logos/logo-colivme-web.svg" alt="Workflow logo" />
           </div>
