@@ -14,11 +14,13 @@ module.exports = {
         './.nuxt/**/*.html',
         './.nuxt/**/*.vue',
         './.nuxt/**/*.js',
+        './dist/**/*.html',
+        './dist/**/*.js'
     ],
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Inter', ...defaultTheme.fontFamily.sans]
+                sans: ['"Inter var"', ...defaultTheme.fontFamily.sans]
             }
         }
     },
