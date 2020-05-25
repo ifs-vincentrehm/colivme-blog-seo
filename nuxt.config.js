@@ -103,7 +103,7 @@ export default {
      */
     purgeCSS: {
         mode: 'postcss',
-        enabled: !!(process.env.MODE === 'production'),
+        enabled: !!(process.env.NODE_ENV === 'production'),
         paths: [
             'components/**/*.vue',
             'layouts/**/*.vue',
