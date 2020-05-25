@@ -14,7 +14,14 @@ module.exports = {
         'components/**/*.vue',
         'layouts/**/*.vue',
         'pages/**/*.vue',
-        'plugins/**/*.js'
+        'plugins/**/*.js',
+        // Server output
+        '.nuxt/**/*.html',
+        '.nuxt/**/*.vue',
+        '.nuxt/**/*.js',
+        // SPA output
+        'dist/**/*.html',
+        'dist/**/*.js'
     ],
     theme: {
         extend: {
