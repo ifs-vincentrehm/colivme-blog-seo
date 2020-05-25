@@ -70,6 +70,11 @@ export default {
         // Doc: https://pwa.nuxtjs.org/setup.html
         '@nuxtjs/pwa'
     ],
+    pwa: {
+        icon: {
+            iconSrc: '~/assets/img/icon.png'
+        }
+    },
     responsiveLoader: {
         name: 'img/[name]-[width].[ext]', // use [name] to keep the original filename
         sizes: [320, 640, 768, 1024, 1280], // array of image sizes - adjust to your layout needs
