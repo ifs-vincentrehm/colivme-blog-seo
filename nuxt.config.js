@@ -74,8 +74,7 @@ export default {
         name: 'img/[name]-[width].[ext]', // use [name] to keep the original filename
         sizes: [320, 640, 768, 1024, 1280], // array of image sizes - adjust to your layout needs
         quality: 85, // 85 is default. Tweak this if you need to
-        placeholder: true,
-        adapter: require('responsive-loader/sharp')
+        placeholder: true
     },
     /*
      ** Axios module configuration
@@ -103,7 +102,7 @@ export default {
      */
     purgeCSS: {
         mode: 'postcss',
-        enabled: !!(process.env.MODE === 'production'),
+        enabled: !!(process.env.NODE_ENV === 'production'),
         paths: [
             'components/**/*.vue',
             'layouts/**/*.vue',
