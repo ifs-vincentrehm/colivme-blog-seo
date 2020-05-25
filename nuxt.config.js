@@ -58,8 +58,6 @@ export default {
         '@nuxtjs/dotenv',
         // Doc: https://github.com/nuxt-community/svg-module
         // '@nuxtjs/svg', // incompatible with nuxt-responsive-loader
-        // Doc: https://github.com/geeogi/nuxt-responsive-loader#readme
-        'nuxt-responsive-loader'
     ],
     /*
      ** Nuxt.js modules
@@ -68,7 +66,9 @@ export default {
         // Doc: https://axios.nuxtjs.org/usage
         '@nuxtjs/axios',
         // Doc: https://pwa.nuxtjs.org/setup.html
-        '@nuxtjs/pwa'
+        '@nuxtjs/pwa',
+        // Doc: https://github.com/geeogi/nuxt-responsive-loader#readme
+        'nuxt-responsive-loader'
     ],
     responsiveLoader: {
         name: 'img/[name]-[width].[ext]', // use [name] to keep the original filename
