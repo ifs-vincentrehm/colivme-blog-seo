@@ -26,7 +26,9 @@
     "dependencies": {
         "@nuxtjs/axios": "^5.3.6",
         "@nuxtjs/pwa": "^3.0.0-0",
-        "nuxt": "^2.0.0"
+        "nuxt": "^2.0.0",
+        "sharp": "^0.25.3",
+        "nuxt-responsive-loader": "^2.0.1"
     },
     "devDependencies": {
         "@nuxtjs/dotenv": "^1.4.1",
@@ -44,11 +46,9 @@
         "lazysizes": "^5.2.1",
         "lint-staged": "^10.0.0",
         "nuxt-purgecss": "^1.0.0",
-        "nuxt-responsive-loader": "^2.0.1",
         "nuxt-webfontloader": "^1.1.0",
         "prettier": "^1.19.1",
         "purgecss": "^2.2.1",
-        "sharp": "^0.25.3",
         "stylelint": "^10.1.0",
         "stylelint-config-recommended": "^3.0.0"
     }
