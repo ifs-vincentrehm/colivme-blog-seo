@@ -38,22 +38,22 @@
         </div>
       </div>
     </div>
-
-    <!--
-    Mobile menu, toggle classes based on menu state.
-
-    Menu open: "block", Menu closed: "hidden"
-  -->
-    <div :class="isOpen ? 'block' : 'hidden sm:hidden'">
-      <div class="pt-2 pb-4">
-        <a href="#" class="navbar-mobile-first-link focus:outline-none focus:text-blue-800 focus:bg-blue-100 focus:border-blue-700">
-          {{ links[0] }}
-        </a>
-        <a v-for="(link, index) in filteredLinks" :key="index" href="#" class="navbar-mobile-second-links hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300">
-          {{ link }}
-        </a>
+    <transition name="fade" enter-active-class="duration-200 ease-out" enter-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in" leave-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">
+      <!--
+      Mobile menu, toggle classes based on menu state.
+      Menu open: "block", Menu closed: "hidden"
+      -->
+      <div :class="isOpen ? 'block' : 'hidden sm:hidden'">
+        <div class="pt-2 pb-4">
+          <a href="#" class="navbar-mobile-first-link focus:outline-none focus:text-blue-800 focus:bg-blue-100 focus:border-blue-700">
+            {{ links[0] }}
+          </a>
+          <a v-for="(link, index) in filteredLinks" :key="index" href="#" class="navbar-mobile-second-links hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300">
+            {{ link }}
+          </a>
+        </div>
       </div>
-    </div>
+    </transition>
   </nav>
 </template>
 
