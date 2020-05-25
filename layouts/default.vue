@@ -1,8 +1,19 @@
 <template>
   <div>
-    <nuxt />
+    <the-navbar />
+    <nuxt id="content" class="container mx-auto" />
   </div>
 </template>
+
+<script>
+import TheNavbar from '~/components/TheNavbar.vue'
+
+export default {
+  components: {
+    TheNavbar
+  }
+}
+</script>
 
 <style>
 html {

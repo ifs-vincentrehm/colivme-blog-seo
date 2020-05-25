@@ -6,6 +6,10 @@ if (process.env.MODE === 'development' || process.env.NODE_ENV === 'development'
 
 export default {
     mode: 'spa',
+    server: {
+        host: process.env.MODE === 'production' ? '0.0.0.0' : 'localhost', // default: localhost
+        port: 3000 // default: 3000
+    },
     /*
      ** Headers of the page
      */
@@ -87,16 +91,16 @@ export default {
      * Modified based on tailwindUI settings: https://tailwindui.com/documentation#update-your-purgecss-configuration
      */
     purgeCSS: {
-        // mode: 'postcss',
-        // enabled: !!(process.env.NODE_ENV === 'production'),
-        // paths: [
-        //     'components/**/*.vue',
-        //     'layouts/**/*.vue',
-        //     'pages/**/*.vue',
-        //     'plugins/**/*.js'
-        // ],
-        // styleExtensions: ['.css'],
-        // whitelist: ['body', 'html', 'nuxt-progress'],
+        mode: 'postcss',
+        enabled: !!(process.env.NODE_ENV === 'production'),
+        paths: [
+            'components/**/*.vue',
+            'layouts/**/*.vue',
+            'pages/**/*.vue',
+            'plugins/**/*.js'
+        ],
+        styleExtensions: ['.css'],
+        whitelist: ['body', 'html', 'nuxt-progress'],
         extractors: () => [{
             extractor: (content) => (content || '').match(/[\w-/.:]+(?<!:)/g) || [],
             extensions: ['html', 'vue', 'js']
