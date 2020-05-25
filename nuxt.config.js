@@ -91,7 +91,7 @@ export default {
      * Modified based on tailwindUI settings: https://tailwindui.com/documentation#update-your-purgecss-configuration
      */
     purgeCSS: {
-        mode: 'postcss',
+        mode: 'webpack',
         enabled: !!(process.env.NODE_ENV === 'production'),
         paths: [
             'components/**/*.vue',
@@ -110,6 +110,7 @@ export default {
      ** Build configuration
      */
     build: {
+        extractCSS: process.env.NODE_ENV === 'production',
         postcss: {
             preset: {
                 features: {
