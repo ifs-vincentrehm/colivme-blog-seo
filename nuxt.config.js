@@ -37,7 +37,9 @@ export default {
     /*
      ** Plugins to load before mounting the App
      */
-    plugins: [],
+    plugins: [
+        '~/plugins/lazysizes.client.js'
+    ],
     /*
      ** Nuxt.js dev-modules
      */
@@ -116,6 +118,12 @@ export default {
                     // Fixes: https://github.com/tailwindcss/tailwindcss/issues/1190#issuecomment-546621554
                     'focus-within-pseudo-class': false
                 }
+            }
+        },
+        extend(config, { isClient, loaders: { vue } }) {
+            if (isClient) {
+                vue.transformAssetUrls.img = ['data-src', 'src']
+                vue.transformAssetUrls.source = ['data-srcset', 'srcset']
             }
         }
     }
