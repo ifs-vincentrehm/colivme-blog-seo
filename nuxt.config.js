@@ -38,7 +38,7 @@ export default {
      ** Plugins to load before mounting the App
      */
     plugins: [
-        '~/plugins/lazysizes.client.js'
+        '~/plugins/lazysizes.js'
     ],
     /*
      ** Nuxt.js dev-modules

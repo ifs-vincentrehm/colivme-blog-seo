@@ -1,3 +1,3 @@
-// lazysizes.client.js
+// lazysizes.js
 import lazySizes from 'lazysizes'
 export default lazySizes
