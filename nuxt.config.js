@@ -7,7 +7,7 @@ if (process.env.MODE === 'development' || process.env.NODE_ENV === 'development'
 export default {
     mode: 'universal',
     server: {
-        host: process.env.MODE === 'production' ? '0.0.0.0' : 'localhost', // default: localhost
+        host: (process.env.MODE === 'production' || process.env.NODE_ENV === 'production') ? '0.0.0.0' : 'localhost', // default: localhost
         port: 3000 // default: 3000
     },
     /*
@@ -58,6 +58,8 @@ export default {
         '@nuxtjs/dotenv',
         // Doc: https://github.com/nuxt-community/svg-module
         // '@nuxtjs/svg', // incompatible with nuxt-responsive-loader
+        // Doc: https://github.com/geeogi/nuxt-responsive-loader#readme
+        'nuxt-responsive-loader'
     ],
     /*
      ** Nuxt.js modules
@@ -66,9 +68,7 @@ export default {
         // Doc: https://axios.nuxtjs.org/usage
         '@nuxtjs/axios',
         // Doc: https://pwa.nuxtjs.org/setup.html
-        '@nuxtjs/pwa',
-        // Doc: https://github.com/geeogi/nuxt-responsive-loader#readme
-        'nuxt-responsive-loader'
+        '@nuxtjs/pwa'
     ],
     responsiveLoader: {
         name: 'img/[name]-[width].[ext]', // use [name] to keep the original filename
