@@ -5,7 +5,7 @@ if (process.env.MODE === 'development' || process.env.NODE_ENV === 'development'
 }
 
 export default {
-    mode: 'spa',
+    mode: 'universal',
     server: {
         host: process.env.MODE === 'production' ? '0.0.0.0' : 'localhost', // default: localhost
         port: 3000 // default: 3000
@@ -57,7 +57,9 @@ export default {
         // Doc: https://github.com/nuxt-community/dotenv-module
         '@nuxtjs/dotenv',
         // Doc: https://github.com/nuxt-community/svg-module
-        '@nuxtjs/svg'
+        // '@nuxtjs/svg', // incompatible with nuxt-responsive-loader
+        // Doc: https://github.com/geeogi/nuxt-responsive-loader#readme
+        'nuxt-responsive-loader'
     ],
     /*
      ** Nuxt.js modules
@@ -68,6 +70,13 @@ export default {
         // Doc: https://pwa.nuxtjs.org/setup.html
         '@nuxtjs/pwa'
     ],
+    responsiveLoader: {
+        name: 'img/[name]-[width].[ext]', // use [name] to keep the original filename
+        sizes: [320, 640, 768, 1024, 1280], // array of image sizes - adjust to your layout needs
+        quality: 85, // 85 is default. Tweak this if you need to
+        placeholder: true,
+        adapter: require('responsive-loader/sharp')
+    },
     /*
      ** Axios module configuration
      ** See https://axios.nuxtjs.org/options

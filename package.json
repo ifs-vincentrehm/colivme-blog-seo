@@ -26,7 +26,6 @@
     "dependencies": {
         "@nuxtjs/axios": "^5.3.6",
         "@nuxtjs/pwa": "^3.0.0-0",
-        "lazysizes": "^5.2.1",
         "nuxt": "^2.0.0"
     },
     "devDependencies": {
@@ -34,7 +33,6 @@
         "@nuxtjs/eslint-config": "^2.0.0",
         "@nuxtjs/eslint-module": "^1.0.0",
         "@nuxtjs/stylelint-module": "^3.1.0",
-        "@nuxtjs/svg": "^0.1.11",
         "@nuxtjs/tailwindcss": "^1.0.0",
         "@tailwindcss/ui": "^0.3.0",
         "babel-eslint": "^10.0.1",
@@ -43,11 +41,14 @@
         "eslint-plugin-nuxt": ">=0.4.2",
         "eslint-plugin-prettier": "^3.1.2",
         "husky": "^4.0.0",
+        "lazysizes": "^5.2.1",
         "lint-staged": "^10.0.0",
         "nuxt-purgecss": "^1.0.0",
+        "nuxt-responsive-loader": "^2.0.1",
         "nuxt-webfontloader": "^1.1.0",
         "prettier": "^1.19.1",
         "purgecss": "^2.2.1",
+        "sharp": "^0.25.3",
         "stylelint": "^10.1.0",
         "stylelint-config-recommended": "^3.0.0"
     }
