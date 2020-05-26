@@ -1,11 +1,18 @@
 <template>
   <footer class="bg-white">
-    <div class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-      <div class="mt-12 border-t-2 border-gray-200 pt-8"></div>
-      <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-        <div class="xl:col-span-1">
-          <img class="h-8 w-auto lazyload" :data-src="require('~/assets/img/logos/logo-colivme-web.svg')" alt="Colivme logo" />
-          <div id="social-links" class="mt-8 flex">
+    <div class="max-w-screen-xl mx-auto py-12 px-4 md:px-6 lg:py-16 lg:px-8">
+      <!-- Spacer -->
+      <div class="mt-8 border-t-2 border-gray-200 pt-8"></div>
+
+      <!-- Footer -->
+      <div class="grid grid-cols-1 gap-2 md:grid-cols-4 md:gap-8">
+        <!-- Logo section of footer -->
+        <div class="mt-8">
+          <div class="flex justify-center md:justify-start w-full">
+            <img class="h-8 lazyload" :data-src="require('~/assets/img/logos/logo-colivme-web.svg')" alt="Colivme logo" />
+          </div>
+
+          <div id="social-links" class="mt-8 flex justify-center md:justify-start w-full">
             <a href="#" class="text-gray-600 hover:text-gray-700">
               <span class="sr-only">Facebook</span>
               <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
@@ -35,174 +42,179 @@
               </svg>
             </a>
           </div>
-          <p class="mt-8 text-gray-700 text-base leading-6">
-            Plus d'infos ? <a target="_blank" rel="noopener noreferrer" href="tel:+33182886991" class="font-bold"><b>+33 (0) 1 82 88 69 91</b></a>
-          </p>
-          <span class="inline-flex rounded-md mt-8 w-full">
-            <button type="button" class="shadow-sm inline-flex items-center justify-center px-6 py-3 border border-transparent text-lg leading-6 font-medium w-2/3 rounded-full text-white bg-blue-900 hover:bg-blue-800 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150">
-              Contactez-nous
-            </button>
-          </span>
-        </div>
-        <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
-          <div class="md:grid md:grid-cols-3 md:gap-8">
-            <div class="md:col-start-2 md:col-span-2">
-              <h4 class="text-sm leading-5 font-semibold tracking-wider text-gray-600 uppercase">
-                Légal
-              </h4>
-              <ul class="mt-4">
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">
-                    CGU
-                  </a>
-                </li>
-                <li class="mt-4">
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">
-                    Protection des données
-                  </a>
-                </li>
-                <li class="mt-4">
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">
-                    Cookies
-                  </a>
-                </li>
-              </ul>
-            </div>
+
+          <div class="flex flex-col flex-wrap items-center md:items-start w-full">
+            <p class="mt-8 text-gray-700 text-base leading-6">
+              Plus d'infos ? <a target="_blank" rel="noopener noreferrer" href="tel:+33182886991" class="font-bold"><b>+33 (0) 1 82 88 69 91</b></a>
+            </p>
+            <span class="inline-flex rounded-md mt-8 w-auto">
+              <button type="button" class="shadow-sm inline-flex items-center justify-center px-6 py-3 border border-transparent text-lg leading-6 font-medium w-auto rounded-full text-white bg-blue-900 hover:bg-blue-800 focus:outline-none focus:border-blue-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150">
+                Contactez-nous
+              </button>
+            </span>
           </div>
+        </div>
 
-          <div class="md:grid md:grid-cols-2 md:gap-8">
-            <div class="mt-12 md:mt-0">
-              <h4 class="text-sm leading-5 font-semibold tracking-wider text-gray-600 uppercase">
-                Espaces de Coliving
-              </h4>
-              <ul class="mt-4">
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Adeje, Tenerife</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Anglet, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Ardèche, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Arles, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Auch, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Bayonne, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Berlin, Germany</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Biarritz , France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Bizanos, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Bordeaux, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Bruxelles, Belgium</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Bures Morainvilliers, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Cahors, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Chantilly, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Charleroi, Belgium</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Chatellerault, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Chauny, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Cholet, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Grenoble, France</a>
-                </li>
-              </ul>
-            </div>
+        <!-- Other sections hidden on md+ -->
+        <div class="mt-8 hidden md:block">
+          <h4 class="text-sm leading-5 font-semibold tracking-wider text-gray-600 uppercase">
+            Légal
+          </h4>
+          <ul class="mt-4">
+            <li>
+              <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">
+                CGU
+              </a>
+            </li>
+            <li class="mt-4">
+              <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">
+                Protection des données
+              </a>
+            </li>
+            <li class="mt-4">
+              <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">
+                Cookies
+              </a>
+            </li>
+          </ul>
+        </div>
 
-            <div>
-              <h4 class="text-sm invisible leading-5 font-semibold tracking-wider text-gray-600 uppercase">Espaces de Coliving</h4>
-              <ul class="mt-4">
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Javea, Spain</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Lille, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Limoges, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Louviers, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Madrid, Spain</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Marseille, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Montpellier, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Nancy, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Nantes, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Nice, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Normandie, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Paris / Grand Paris, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Pau, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Provence - Aix en Provence, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Roanne, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Rouen, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Saint Benoit, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Strasbourg, France</a>
-                </li>
-                <li>
-                  <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Toulouse, France</a>
-                </li>
-              </ul>
-            </div>
+        <div class="mt-8 hidden md:block">
+          <div class="text-right">
+            <h4 class="text-sm leading-5 font-semibold tracking-wider text-gray-600 uppercase">
+              Espaces de Coliving
+            </h4>
+            <ul class="mt-4 flex flex-col items-end">
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Adeje, Tenerife</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Anglet, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Ardèche, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Arles, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Auch, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Bayonne, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Berlin, Germany</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Biarritz , France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Bizanos, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Bordeaux, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Bruxelles, Belgium</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Bures Morainvilliers, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Cahors, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Chantilly, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Charleroi, Belgium</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Chatellerault, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Chauny, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Cholet, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Grenoble, France</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-8 hidden md:block">
+          <div class="text-right">
+            <h4 class="text-sm invisible leading-5 font-semibold tracking-wider text-gray-600 uppercase">
+              Espaces de Coliving
+            </h4>
+            <ul class="mt-4 flex flex-col items-end">
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Javea, Spain</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Lille, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Limoges, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Louviers, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Madrid, Spain</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Marseille, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Montpellier, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Nancy, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Nantes, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Nice, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Normandie, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Paris / Grand Paris, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Pau, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Provence - Aix en Provence, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Roanne, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Rouen, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Saint Benoit, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Strasbourg, France</a>
+              </li>
+              <li>
+                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Toulouse, France</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
 
-      <p class="text-sm leading-6 text-gray-600 xl:text-center">&copy; 2020 ColivMe - Touts droits réservés.</p>
+      <p class="text-sm text-center my-4 leading-6 text-gray-600 xl:text-center">&copy; 2020 ColivMe - Touts droits réservés.</p>
     </div>
   </footer>
 </template>
