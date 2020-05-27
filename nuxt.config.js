@@ -5,14 +5,14 @@ if (process.env.MODE === 'development' || process.env.NODE_ENV === 'development'
 }
 
 export default {
-    mode: 'spa',
+    mode: 'universal',
     server: {
         host: (process.env.MODE === 'production' || process.env.NODE_ENV === 'production') ? '0.0.0.0' : 'localhost', // default: localhost
         port: 3000 // default: 3000
     },
-    // env: {
-    //     assetsBaseUrl: process.env.STATIC ? 'https://static.lescompagnonsducode.fr' : ''
-    // },
+    env: {
+        assetsBaseUrl: process.env.STATIC ? 'https://static.lescompagnonsducode.fr' : ''
+    },
     /*
      ** Headers of the page
      */
@@ -128,7 +128,7 @@ export default {
      ** Build configuration
      */
     build: {
-        publicPath: 'https://static.lescompagnonsducode.fr',
+        // publicPath: 'https://static.lescompagnonsducode.fr',
         postcss: {
             preset: {
                 features: {

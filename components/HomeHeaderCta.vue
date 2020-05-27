@@ -19,19 +19,17 @@
 
 <script>
 export default {
-  // data() {
-  //   return {
-  //     assetsBaseUrl: process.env.assetsBaseUrl
-  //   }
-  // },
+  data() {
+    return {
+      assetsBaseUrl: process.env.assetsBaseUrl
+    }
+  },
   computed: {
     headerDesktopUrl() {
-      return require('~/assets/img/header-desktop.jpg').srcSet
-      // return this.assetsBaseUrl + require('~/assets/img/header-desktop.jpg').srcSet
+      return this.assetsBaseUrl + require('~/assets/img/header-desktop.jpg').srcSet
     },
     headerMobileUrl() {
-      return require('~/assets/img/header-mobile.jpg').srcSet
-      // return this.assetsBaseUrl + require('~/assets/img/header-mobile.jpg').srcSet
+      return this.assetsBaseUrl + require('~/assets/img/header-mobile.jpg').srcSet
     }
   }
 }
