@@ -5,7 +5,7 @@ if (process.env.MODE === 'development' || process.env.NODE_ENV === 'development'
 }
 
 export default {
-    mode: 'universal',
+    mode: 'spa',
     server: {
         host: (process.env.MODE === 'production' || process.env.NODE_ENV === 'production') ? '0.0.0.0' : 'localhost', // default: localhost
         port: 3000 // default: 3000
