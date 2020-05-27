@@ -1,8 +1,8 @@
 <template>
   <section id="header" class="relative">
     <picture class="relative flex justify-center">
-      <source :data-srcset="require('~/assets/img/header-desktop.jpg').srcSet" media="(min-width: 640px)" />
-      <img class="lazyload" :data-srcset="require('~/assets/img/header-mobile.jpg').srcSet" alt="Découvrez nos logements en coliving" />
+      <source :data-srcset="headerDesktopUrl" media="(min-width: 640px)" />
+      <img class="lazyload" :data-srcset="headerMobileUrl" alt="Découvrez nos logements en coliving" />
     </picture>
 
     <h1 class="text-white absolute inset-0 h-full uppercase">
@@ -16,3 +16,21 @@
     </h2>
   </section>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      assetsBaseUrl: process.env.assetsBaseUrl
+    }
+  },
+  computed: {
+    headerDesktopUrl() {
+      return this.assetsBaseUrl + require('~/assets/img/header-desktop.jpg').srcSet
+    },
+    headerMobileUrl() {
+      return this.assetsBaseUrl + require('~/assets/img/header-mobile.jpg').srcSet
+    }
+  }
+}
+</script>
