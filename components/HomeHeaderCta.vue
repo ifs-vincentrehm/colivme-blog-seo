@@ -1,8 +1,8 @@
 <template>
   <section id="header" class="relative">
     <picture class="relative flex justify-center">
-      <source :data-srcset="headerDesktopUrl" media="(min-width: 640px)" />
-      <img class="lazyload" :data-srcset="headerMobileUrl" alt="Découvrez nos logements en coliving" />
+      <source class="lazyload" :data-src="desktopPlaceHolder" :data-srcset="headerDesktopSrcSet" alt="Découvrez nos logements en coliving" media="(min-width: 640px)" />
+      <img class="lazyload" :data-src="mobilePlaceHolder" :data-srcset="headerMobileSrcSet" alt="Découvrez nos logements en coliving" />
     </picture>
 
     <h1 class="text-white absolute inset-0 h-full uppercase">
@@ -21,15 +21,34 @@
 export default {
   data() {
     return {
-      assetsBaseUrl: process.env.assetsBaseUrl
+      assetsBaseUrl: process.env.assetsBaseUrl,
+      desktopPath: require('~/assets/img/header-desktop.jpg').srcSet,
+      mobilePath: require('~/assets/img/header-mobile.jpg').srcSet,
+      desktopPlaceHolder: require('~/assets/img/header-desktop.jpg').placeholder,
+      mobilePlaceHolder: require('~/assets/img/header-mobile.jpg').placeholder
     }
   },
   computed: {
-    headerDesktopUrl() {
-      return this.assetsBaseUrl + require('~/assets/img/header-desktop.jpg').srcSet
+    headerDesktopSrcSet() {
+      const urls = this.desktopPath.split(',')
+      const result = this.processSrcSet(urls)
+      return result
     },
-    headerMobileUrl() {
-      return this.assetsBaseUrl + require('~/assets/img/header-mobile.jpg').srcSet
+    headerMobileSrcSet() {
+      const urls = this.mobilePath.split(',')
+      const result = this.processSrcSet(urls)
+      return result
+    }
+  },
+  methods: {
+    processSrcSet(urls) {
+      const results = []
+      for (let index = 0; index < urls.length; index++) {
+        const element = urls[index]
+        results.push(this.assetsBaseUrl + element)
+      }
+      const result = results.join(', ')
+      return result
     }
   }
 }

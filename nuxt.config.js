@@ -11,7 +11,8 @@ export default {
         port: 3000 // default: 3000
     },
     env: {
-        assetsBaseUrl: process.env.NODE_ENV === 'production' ? 'https://static.lescompagnonsducode.fr' : ''
+        assetsBaseUrl: (process.env.NODE_ENV === 'production' || process.env.STATIC) ?
+            'https://static.lescompagnonsducode.fr' : ''
     },
     /*
      ** Headers of the page
@@ -137,11 +138,9 @@ export default {
                 }
             }
         },
-        extend(config, { isClient, loaders: { vue } }) {
-            if (isClient) {
-                vue.transformAssetUrls.img = ['data-src', 'src']
-                vue.transformAssetUrls.source = ['data-srcset', 'srcset']
-            }
+        extend(config, { loaders: { vue } }) {
+            vue.transformAssetUrls.img = ['data-src', 'src']
+            vue.transformAssetUrls.source = ['data-srcset', 'srcset']
         }
     }
 }
