@@ -11,7 +11,7 @@ export default {
         port: 3000 // default: 3000
     },
     env: {
-        assetsBaseUrl: process.env.STATIC ? 'https://static.lescompagnonsducode.fr' : ''
+        assetsBaseUrl: process.env.NODE_ENV === 'production' ? 'https://static.lescompagnonsducode.fr' : ''
     },
     /*
      ** Headers of the page
