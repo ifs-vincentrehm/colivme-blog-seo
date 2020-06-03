@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-white">
-    <div class="max-w-screen-xl mx-auto py-12 px-4 md:px-6 lg:py-16 lg:px-8">
+    <div class="max-w-screen-xl mx-auto py-12 px-4 md:px-6 lg:py-6 lg:px-8">
       <!-- Spacer -->
       <div class="mt-8 border-t-2 border-gray-200 pt-8"></div>
 
