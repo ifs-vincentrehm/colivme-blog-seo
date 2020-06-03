@@ -1,13 +1,11 @@
 <template>
-  <div class="relative bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-8 lg:pb-8 lg:px-8">
+  <div class="relative bg-white pt-4 pb-4 px-4 sm:px-6 lg:pt-8 lg:pb-8 lg:px-8">
     <div class="absolute inset-0">
       <div class="bg-white h-1/3 sm:h-2/3"></div>
     </div>
     <div class="relative max-w-7xl mx-auto">
-      <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
-        <div v-for="article in category.articles" :key="article.id" class="flex">
-          <article-card :article="articles[article.id - 1]" />
-        </div>
+      <div v-for="article in category.articles" :key="article.id" class="mt-4 sm:mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
+        <article-card :article="articles[article.id - 1]" />
       </div>
     </div>
   </div>
