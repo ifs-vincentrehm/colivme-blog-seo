@@ -63,7 +63,9 @@ export default {
         // Doc: https://github.com/nuxt-community/svg-module
         // '@nuxtjs/svg', // incompatible with nuxt-responsive-loader
         // Doc: https://github.com/geeogi/nuxt-responsive-loader#readme
-        'nuxt-responsive-loader'
+        'nuxt-responsive-loader',
+        // Doc: https://github.com/nuxt-community/modules/tree/master/packages/markdownit
+        '@nuxtjs/markdownit'
     ],
     /*
      ** Nuxt.js modules
@@ -74,6 +76,12 @@ export default {
         // Doc: https://pwa.nuxtjs.org/setup.html
         '@nuxtjs/pwa'
     ],
+    markdownit: {
+        preset: 'default',
+        linkify: true,
+        breaks: true,
+        injected: true
+    },
     pwa: {
         icon: {
             iconSrc: '~/assets/img/icon.png'

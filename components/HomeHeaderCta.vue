@@ -1,8 +1,8 @@
 <template>
   <section id="header" class="relative">
     <picture class="relative flex justify-center">
-      <source class="lazyload" :data-src="desktopPlaceHolder" :data-srcset="headerDesktopSrcSet" alt="Découvrez nos logements en coliving" media="(min-width: 640px)" />
-      <img class="lazyload" :data-src="mobilePlaceHolder" :data-srcset="headerMobileSrcSet" alt="Découvrez nos logements en coliving" />
+      <source class="lazyload" :srcset="desktopPath" alt="Découvrez nos logements en coliving" media="(min-width: 640px)" />
+      <img class="lazyload" :src="mobilePlaceHolder" :srcset="mobilePath" alt="Découvrez nos logements en coliving" />
     </picture>
 
     <h1 class="text-white absolute inset-0 h-full uppercase">
