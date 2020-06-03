@@ -1,17 +1,14 @@
 <template>
-  <section id="content">
-    <home-header-cta />
+  <section id="articles-index">
     <article-collection-grid :articles="articles" />
   </section>
 </template>
 
 <script>
-import HomeHeaderCta from '~/components/HomeHeaderCta.vue'
 import ArticleCollectionGrid from '~/components/ArticleCollectionGrid.vue'
 
 export default {
   components: {
-    HomeHeaderCta,
     ArticleCollectionGrid
   },
   async asyncData({ $axios }) {

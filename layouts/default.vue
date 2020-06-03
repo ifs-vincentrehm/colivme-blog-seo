@@ -1,6 +1,7 @@
 <template>
   <div>
     <the-navbar id="navbar" />
+    <home-header-cta />
     <nuxt id="content" class="container mx-auto" />
     <the-footer id="footer" />
   </div>
@@ -9,11 +10,13 @@
 <script>
 import TheNavbar from '~/components/TheNavbar.vue'
 import TheFooter from '~/components/TheFooter.vue'
+import HomeHeaderCta from '~/components/HomeHeaderCta.vue'
 
 export default {
   components: {
     TheNavbar,
-    TheFooter
+    TheFooter,
+    HomeHeaderCta
   }
 }
 </script>
