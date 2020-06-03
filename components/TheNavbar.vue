@@ -21,14 +21,14 @@
         <!-- Navbar links -->
         <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-end">
           <!-- Colivme logo -->
-          <div class="flex-shrink-0 flex flex-none lg:flex-1 items-center">
+          <nuxt-link to="/" class="flex-shrink-0 flex flex-none lg:flex-1 items-center">
             <img class="h-12 w-auto lazyload" :data-src="require('~/assets/img/logos/logo-colivme-web.svg')" alt="Colivme logo" />
-          </div>
+          </nuxt-link>
 
           <div class="hidden sm:ml-6 sm:flex">
-            <a href="#" class="navbar-first-link focus:outline-none focus:border-blue-700">
+            <nuxt-link to="/" class="navbar-first-link focus:outline-none focus:border-blue-700">
               {{ links[0] }}
-            </a>
+            </nuxt-link>
 
             <a v-for="(link, index) in filteredLinks" :key="index" href="#" class="navbar-second-links hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300">
               {{ link }}

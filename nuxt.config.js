@@ -1,10 +1,36 @@
 /* eslint-disable prettier/prettier */
 
-if (process.env.MODE === 'development' || process.env.NODE_ENV === 'development') {
-    require('dotenv').config()
-}
+import axios from 'axios'
+require('dotenv').config()
+
+const baseURL = process.env.BACKEND_URL
 
 export default {
+    generate: {
+        routes() {
+            const articles = axios.get(baseURL + '/articles').then((res) => {
+                return res.data.map((article) => {
+                    return {
+                        route: '/articles/' + article.slug,
+                        payload: article
+                    }
+                })
+            })
+
+            const categories = axios.get(baseURL + '/categories').then((res) => {
+                return res.data.map((category) => {
+                    return {
+                        route: '/categories/' + category.slug,
+                        payload: category
+                    }
+                })
+            })
+
+            return Promise.all([articles, categories]).then((values) => {
+                return [...values[0], ...values[1]]
+            })
+        }
+    },
     mode: 'universal',
     server: {
         host: (process.env.MODE === 'production' || process.env.NODE_ENV === 'production') ? '0.0.0.0' : 'localhost', // default: localhost
@@ -63,7 +89,9 @@ export default {
         // Doc: https://github.com/nuxt-community/svg-module
         // '@nuxtjs/svg', // incompatible with nuxt-responsive-loader
         // Doc: https://github.com/geeogi/nuxt-responsive-loader#readme
-        'nuxt-responsive-loader'
+        'nuxt-responsive-loader',
+        // Doc: https://github.com/nuxt-community/modules/tree/master/packages/markdownit
+        '@nuxtjs/markdownit'
     ],
     /*
      ** Nuxt.js modules
@@ -74,6 +102,12 @@ export default {
         // Doc: https://pwa.nuxtjs.org/setup.html
         '@nuxtjs/pwa'
     ],
+    markdownit: {
+        preset: 'default',
+        linkify: true,
+        breaks: true,
+        injected: true
+    },
     pwa: {
         icon: {
             iconSrc: '~/assets/img/icon.png'

@@ -29,6 +29,7 @@
         "nuxt": "^2.0.0"
     },
     "devDependencies": {
+        "@nuxtjs/markdownit": "^1.2.9",
         "@nuxtjs/dotenv": "^1.4.1",
         "@nuxtjs/eslint-config": "^2.0.0",
         "@nuxtjs/eslint-module": "^1.0.0",
