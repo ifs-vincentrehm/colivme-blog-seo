@@ -3,10 +3,8 @@
     <div class="absolute inset-0">
       <div class="bg-white h-1/3 sm:h-2/3"></div>
     </div>
-    <div class="relative max-w-7xl mx-auto">
-      <div v-for="article in category.articles" :key="article.id" class="mt-4 sm:mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
-        <article-card :article="articles[article.id - 1]" />
-      </div>
+    <div class="relative max-w-7xl mx-auto mt-4 sm:mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
+      <article-card v-for="article in category.articles" :key="article.id" :article="articles[article.id - 1]" />
     </div>
   </div>
 </template>

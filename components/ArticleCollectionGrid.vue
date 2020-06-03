@@ -3,7 +3,7 @@
     <div class="absolute inset-0">
       <div class="bg-white h-1/3 sm:h-2/3"></div>
     </div>
-    <div class="relative max-w-7xl mx-auto">
+    <div class="relative max-w-7xl mx-auto mt-4 sm:mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
       <!-- <div class="text-center">
         <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
           From the blog
@@ -13,9 +13,7 @@
         </p>
       </div> -->
 
-      <div v-for="article in articles" :key="article.id" class="mt-4 sm:mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
-        <article-card :article="article" />
-      </div>
+      <article-card v-for="article in articles" :key="article.id" :article="article" />
     </div>
   </div>
 </template>
