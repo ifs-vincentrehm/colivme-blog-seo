@@ -2,7 +2,7 @@
   <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
     <!-- Article image -->
     <nuxt-link class="flex-shrink-0" :to="'/articles/' + article.slug">
-      <img class="h-48 w-full object-cover lazyload" :src="article.image.url" :alt="article.title" />
+      <img class="h-48 w-full object-cover lazyload" :src="articleImage" :alt="article.title" />
     </nuxt-link>
 
     <div class="flex-1 bg-white p-6 flex flex-col justify-between">
@@ -31,7 +31,7 @@
       <div class="mt-6 flex items-center">
         <!-- Author's avatar -->
         <div class="flex-shrink-0">
-          <img class="h-10 w-10 rounded-full lazyload" :src="article.author.avatar.url" :alt="article.author.full_name" />
+          <img class="h-10 w-10 rounded-full lazyload" :src="avatar" :alt="article.author.full_name" />
         </div>
 
         <!-- Publishing context -->
@@ -62,11 +62,20 @@ export default {
     }
   },
   data() {
-    return { date: '' }
+    return { date: '', articleImage: '', avatar: '' }
   },
   created() {
     const date = new Date(this.article.published_at)
     this.date = date.toLocaleDateString('fr-FR')
+
+    const test = this.article.image.formats.small
+
+    if (test === undefined) {
+      this.articleImage = this.article.image.formats.thumbnail.url
+    } else {
+      this.articleImage = this.article.image.formats.small.url
+    }
+    this.avatar = this.article.author.avatar.formats.thumbnail.url
   }
 }
 </script>
