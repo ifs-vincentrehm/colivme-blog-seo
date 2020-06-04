@@ -95,7 +95,9 @@ export default {
         // Doc: https://www.npmjs.com/package/nuxt-cookie-control
         'nuxt-cookie-control',
         // Doc: https://github.com/nuxt-community/sitemap-module
-        '@nuxtjs/sitemap'
+        '@nuxtjs/sitemap',
+        // Doc: https://github.com/nuxt-community/robots-module
+        '@nuxtjs/robots'
     ],
     /*
      ** Nuxt.js modules
@@ -106,6 +108,12 @@ export default {
         // Doc: https://pwa.nuxtjs.org/setup.html
         '@nuxtjs/pwa'
     ],
+    robots: {
+        UserAgent: '*',
+        Disallow: '/',
+        Host: 'https://colivme.netlify.app/',
+        Sitemap: '/sitemap.xml/'
+    },
     sitemap: {
         hostname: 'https://colivme.netlify.app/'
     },
