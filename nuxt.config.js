@@ -186,7 +186,9 @@ export default {
             'plugins/**/*.js'
         ],
         styleExtensions: ['.css'],
-        whitelist: ['body', 'html', 'nuxt-progress'],
+        whitelist: ['lazyload', 'lazyloaded', 'body', 'html', 'nuxt-progress'],
+        whitelistPatterns: [/cookieControl/],
+        whitelistPatternsChildren: [/cookieControl/],
         extractors: () => [{
             extractor: (content) => (content || '').match(/[\w-/.:]+(?<!:)/g) || [],
             extensions: ['html', 'vue', 'js']

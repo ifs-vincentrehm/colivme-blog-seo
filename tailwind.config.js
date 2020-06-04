@@ -26,6 +26,8 @@ module.exports = {
         ],
         options: {
             whitelist: ['lazyload', 'lazyloaded', 'body', 'html', 'nuxt-progress'],
+            whitelistPatterns: [/cookieControl/],
+            whitelistPatternsChildren: [/cookieControl/]
         }
     },
     theme: {
