@@ -93,7 +93,9 @@ export default {
         // Doc: https://github.com/nuxt-community/modules/tree/master/packages/markdownit
         '@nuxtjs/markdownit',
         // Doc: https://www.npmjs.com/package/nuxt-cookie-control
-        'nuxt-cookie-control'
+        'nuxt-cookie-control',
+        // Doc: https://github.com/nuxt-community/sitemap-module
+        '@nuxtjs/sitemap'
     ],
     /*
      ** Nuxt.js modules
@@ -104,6 +106,9 @@ export default {
         // Doc: https://pwa.nuxtjs.org/setup.html
         '@nuxtjs/pwa'
     ],
+    sitemap: {
+        hostname: 'https://colivme.netlify.app/'
+    },
     cookies: {
         necessary: [{
             name: {
