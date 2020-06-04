@@ -29,10 +29,10 @@
         "nuxt": "^2.0.0"
     },
     "devDependencies": {
-        "@nuxtjs/markdownit": "^1.2.9",
         "@nuxtjs/dotenv": "^1.4.1",
         "@nuxtjs/eslint-config": "^2.0.0",
         "@nuxtjs/eslint-module": "^1.0.0",
+        "@nuxtjs/markdownit": "^1.2.9",
         "@nuxtjs/stylelint-module": "^3.1.0",
         "@nuxtjs/tailwindcss": "^1.0.0",
         "@tailwindcss/ui": "^0.3.0",
@@ -42,15 +42,16 @@
         "eslint-plugin-nuxt": ">=0.4.2",
         "eslint-plugin-prettier": "^3.1.2",
         "husky": "^4.0.0",
+        "lazysizes": "^5.2.1",
         "lint-staged": "^10.0.0",
+        "nuxt-cookie-control": "^1.8.6",
         "nuxt-purgecss": "^1.0.0",
+        "nuxt-responsive-loader": "^2.0.1",
         "nuxt-webfontloader": "^1.1.0",
         "prettier": "^1.19.1",
         "purgecss": "^2.2.1",
-        "stylelint": "^10.1.0",
-        "stylelint-config-recommended": "^3.0.0",
         "sharp": "^0.25.3",
-        "nuxt-responsive-loader": "^2.0.1",
-        "lazysizes": "^5.2.1"
+        "stylelint": "^10.1.0",
+        "stylelint-config-recommended": "^3.0.0"
     }
 }

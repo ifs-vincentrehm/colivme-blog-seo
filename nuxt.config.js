@@ -91,7 +91,9 @@ export default {
         // Doc: https://github.com/geeogi/nuxt-responsive-loader#readme
         'nuxt-responsive-loader',
         // Doc: https://github.com/nuxt-community/modules/tree/master/packages/markdownit
-        '@nuxtjs/markdownit'
+        '@nuxtjs/markdownit',
+        // Doc: https://www.npmjs.com/package/nuxt-cookie-control
+        'nuxt-cookie-control'
     ],
     /*
      ** Nuxt.js modules
@@ -102,6 +104,37 @@ export default {
         // Doc: https://pwa.nuxtjs.org/setup.html
         '@nuxtjs/pwa'
     ],
+    cookies: {
+        necessary: [{
+            name: {
+                fr: "De base"
+            },
+
+            description: {
+                fr: "Utilisés pour le consentement."
+            },
+            cookies: ["cookie_control_consent", "cookie_control_enabled_cookies"]
+        }],
+        optional: [{
+            name: {
+                fr: "Google Tag Manager"
+            },
+            description: {
+                fr: "Google Tag Manager est un service d'analyse Web proposé par Google qui suit et signale le trafic sur le site Web."
+            },
+            src: "https://www.googletagmanager.com/gtag/js?id=GTM-MCVX8CP",
+            async: true,
+            cookies: ['_ga', '_gat', '_gid'],
+            accepted: () => {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'gtm.start': new Date().getTime(),
+                    event: 'gtm.js'
+                });
+            },
+            declined: () => {}
+        }]
+    },
     markdownit: {
         preset: 'default',
         linkify: true,
@@ -153,7 +186,9 @@ export default {
             'plugins/**/*.js'
         ],
         styleExtensions: ['.css'],
-        whitelist: ['body', 'html', 'nuxt-progress'],
+        whitelist: ['lazyload', 'lazyloaded', 'body', 'html', 'nuxt-progress'],
+        whitelistPatterns: [/cookieControl/],
+        whitelistPatternsChildren: [/cookieControl/],
         extractors: () => [{
             extractor: (content) => (content || '').match(/[\w-/.:]+(?<!:)/g) || [],
             extensions: ['html', 'vue', 'js']
