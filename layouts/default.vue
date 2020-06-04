@@ -4,6 +4,7 @@
     <home-header-cta />
     <nuxt id="content" class="container mx-auto" />
     <the-footer id="footer" />
+    <cookie-control locale="fr" />
   </div>
 </template>
 
