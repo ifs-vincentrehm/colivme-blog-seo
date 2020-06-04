@@ -182,7 +182,7 @@ export default {
     },
     webfontloader: {
         google: {
-            families: ['Inter&display=swap']
+            families: ['Roboto&display=swap']
         }
     },
     /*

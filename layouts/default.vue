@@ -24,7 +24,10 @@ export default {
 
 <style>
 html {
-  font-family: 'Inter';
+  @apply font-sans;
+}
+
+@font-face {
   font-display: swap;
 }
 </style>

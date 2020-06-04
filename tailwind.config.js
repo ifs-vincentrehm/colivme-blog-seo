@@ -7,7 +7,7 @@
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
 
-const defaultTheme = require('tailwindcss/defaultTheme')
+// const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
     purge: {
@@ -31,10 +31,13 @@ module.exports = {
         }
     },
     theme: {
-        extend: {
-            fontFamily: {
-                sans: ['"Inter var"', ...defaultTheme.fontFamily.sans]
-            }
+        // extend: {
+        //     fontFamily: {
+        //         sans: ['"Inter var"', ...defaultTheme.fontFamily.sans]
+        //     }
+        // }
+        fontFamily: {
+            sans: ['Roboto']
         }
     },
     variants: {},
