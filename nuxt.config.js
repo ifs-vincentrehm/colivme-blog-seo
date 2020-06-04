@@ -110,7 +110,7 @@ export default {
     ],
     robots: {
         UserAgent: '*',
-        Disallow: '/',
+        Allow: '/',
         Host: 'https://colivme.netlify.app/',
         Sitemap: '/sitemap.xml/'
     },
