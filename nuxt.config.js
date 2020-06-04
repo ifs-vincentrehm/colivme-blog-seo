@@ -112,7 +112,7 @@ export default {
         UserAgent: '*',
         Allow: '/',
         Host: 'https://colivme.netlify.app/',
-        Sitemap: '/sitemap.xml/'
+        Sitemap: 'https://colivme.netlify.app/sitemap.xml'
     },
     sitemap: {
         hostname: 'https://colivme.netlify.app/'
