@@ -21,6 +21,23 @@ export default {
       article = slugifiedArticle
       return { article }
     }
+  },
+  data() {
+    return {
+      title: 'Blog Colivme - Article',
+      description: "Détails de l'article"
+    }
+  },
+  created() {
+    const name = this.article.title
+    this.title = this.title + ' ' + name
+    this.description = this.description + ' ' + name
+  },
+  head() {
+    return {
+      title: this.title,
+      meta: [{ hid: 'description', name: 'description', content: this.description }]
+    }
   }
 }
 </script>
