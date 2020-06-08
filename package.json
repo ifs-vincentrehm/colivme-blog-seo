@@ -1,7 +1,7 @@
 {
     "name": "colivme-blog-seo",
     "version": "1.0.0",
-    "description": "Colivme blog",
+    "description": "Blog Colivme, la 1ère plateforme de référencement des espaces de coliving en France.",
     "author": "Vincent REHM",
     "private": true,
     "scripts": {
@@ -29,6 +29,7 @@
         "nuxt": "^2.0.0"
     },
     "devDependencies": {
+        "nuxt-social-meta": "0.0.5",
         "@nuxtjs/dotenv": "^1.4.1",
         "@nuxtjs/eslint-config": "^2.0.0",
         "@nuxtjs/eslint-module": "^1.0.0",
