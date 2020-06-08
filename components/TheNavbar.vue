@@ -30,8 +30,8 @@
               {{ links[0] }}
             </nuxt-link>
 
-            <a v-for="(link, index) in filteredLinks" :key="index" href="#" class="navbar-second-links hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300">
-              {{ link }}
+            <a v-for="(link, index) in filteredLinks" :key="index" :href="link.url" class="navbar-second-links hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300">
+              {{ link.name }}
             </a>
           </div>
         </div>
@@ -44,11 +44,11 @@
       -->
       <div :class="isOpen ? 'block' : 'hidden sm:hidden'">
         <div class="pt-2 pb-4">
-          <a href="#" class="navbar-mobile-first-link focus:outline-none focus:text-blue-800 focus:bg-blue-100 focus:border-blue-700">
+          <nuxt-link to="/" class="navbar-mobile-first-link focus:outline-none focus:text-blue-800 focus:bg-blue-100 focus:border-blue-700">
             {{ links[0] }}
-          </a>
-          <a v-for="(link, index) in filteredLinks" :key="index" href="#" class="navbar-mobile-second-links hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300">
-            {{ link }}
+          </nuxt-link>
+          <a v-for="(link, index) in filteredLinks" :key="index" :href="link.url" class="navbar-mobile-second-links hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:text-gray-800 focus:bg-gray-50 focus:border-gray-300">
+            {{ link.name }}
           </a>
         </div>
       </div>
@@ -59,7 +59,7 @@
 <script>
 export default {
   data: () => ({
-    links: ['Blog', 'Nos logements', 'Le coliving ?'],
+    links: ['Blog', { name: 'Nos logements', url: 'https://colivme.com/coliving/france' }, { name: 'Le coliving ?', url: 'https://colivme.com/qu-est-ce-que-le-coliving' }],
     isOpen: false
   }),
   computed: {

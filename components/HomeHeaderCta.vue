@@ -1,19 +1,21 @@
 <template>
   <section id="header" class="relative">
-    <picture class="relative flex justify-center">
-      <source class="lazyload" :srcset="desktopPath" alt="Découvrez nos logements en coliving" media="(min-width: 640px)" />
-      <img class="lazyload" :src="mobilePlaceHolder" :srcset="mobilePath" alt="Découvrez nos logements en coliving" />
-    </picture>
+    <a href="https://colivme.com/coliving/france">
+      <picture class="relative flex justify-center">
+        <source class="lazyload" :srcset="desktopPath" alt="Découvrez nos logements en coliving" media="(min-width: 640px)" />
+        <img class="lazyload" :src="mobilePlaceHolder" :srcset="mobilePath" alt="Découvrez nos logements en coliving" />
+      </picture>
 
-    <h1 class="text-white absolute inset-0 h-full uppercase">
-      <span class="flex h-3/4 items-center justify-center text-center text-base md:text-2xl px-16 sm:px-8 leading-normal"> Pourquoi louer un studio petit & cher ?<br />découvrez le coliving </span>
-    </h1>
+      <h1 class="text-white absolute inset-0 h-full uppercase">
+        <span class="flex h-3/4 items-center justify-center text-center text-base md:text-2xl px-16 sm:px-8 leading-normal"> Pourquoi louer un studio petit & cher ?<br />découvrez le coliving </span>
+      </h1>
 
-    <h2 class="flex justify-center">
-      <span class="absolute bottom-0 mb-8 sm:mb-4 inline-flex items-center px-4 py-2 rounded-full text-sm sm:text-xl font-medium leading-5 bg-green-500 text-white">
-        Réservez votre logement
-      </span>
-    </h2>
+      <h2 class="flex justify-center">
+        <span class="absolute bottom-0 mb-8 sm:mb-4 inline-flex items-center px-4 py-2 rounded-full text-sm sm:text-xl font-medium leading-5 bg-green-500 text-white">
+          Réservez votre logement
+        </span>
+      </h2>
+    </a>
   </section>
 </template>
 
