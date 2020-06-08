@@ -97,7 +97,21 @@ export default {
         // Doc: https://github.com/nuxt-community/sitemap-module
         '@nuxtjs/sitemap',
         // Doc: https://github.com/nuxt-community/robots-module
-        '@nuxtjs/robots'
+        '@nuxtjs/robots',
+        // Doc: https://github.com/AlekseyPleshkov/nuxt-social-meta
+        ['nuxt-social-meta',
+            {
+                url: "https://colivme.netlify.app/",
+                title: "Blog Colivme",
+                site_name: "Blog Colivme",
+                description: "Colivme est la 1ère plateforme de référencement des espaces de coliving en France.",
+                img: "/image-social-networks.jpg",
+                locale: "fr_FR",
+                twitter: "@colivme",
+                twitter_card: "summary_large_image",
+                themeColor: "#223C4B",
+            }
+        ]
     ],
     /*
      ** Nuxt.js modules
