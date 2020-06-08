@@ -97,63 +97,7 @@
             </h4>
 
             <ul class="mt-4 flex flex-col items-end">
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Adeje, Tenerife</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Anglet, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Ardèche, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Arles, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Auch, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Bayonne, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Berlin, Germany</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Biarritz , France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Bizanos, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Bordeaux, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Bruxelles, Belgium</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Bures Morainvilliers, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Cahors, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Chantilly, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Charleroi, Belgium</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Chatellerault, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Chauny, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Cholet, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Grenoble, France</a>
-              </li>
+              <footer-link v-for="city in referenceCitiesPartOne" :key="city.id" :reference-city="city" />
             </ul>
           </div>
         </div>
@@ -163,64 +107,9 @@
             <h4 class="text-sm invisible leading-5 font-semibold tracking-wider text-gray-600 uppercase">
               Espaces de Coliving
             </h4>
+
             <ul class="mt-4 flex flex-col items-end">
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Javea, Spain</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Lille, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Limoges, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Louviers, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Madrid, Spain</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Marseille, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Montpellier, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Nancy, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Nantes, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Nice, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Normandie, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Paris / Grand Paris, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Pau, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Provence - Aix en Provence, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Roanne, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Rouen, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Saint Benoit, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Strasbourg, France</a>
-              </li>
-              <li>
-                <a href="#" class="text-base leading-6 text-gray-700 hover:text-gray-700">Toulouse, France</a>
-              </li>
+              <footer-link v-for="city in referenceCitiesPartTwo" :key="city.id" :reference-city="city" />
             </ul>
           </div>
         </div>
@@ -232,7 +121,32 @@
 </template>
 
 <script>
-export default {}
+import FooterLink from '~/components/FooterLink.vue'
+
+export default {
+  components: {
+    FooterLink
+  },
+  async fetch() {
+    const config = { headers: { 'x-api-key': process.env.TOKEN } }
+
+    const {
+      data: { referenceCities }
+    } = await this.$axios.get('https://release-api.clm-rls.ifsalpha.com/reference-cities', config)
+
+    const splitIndex = Math.round(referenceCities.length / 2)
+    const partTwo = referenceCities.splice(splitIndex)
+
+    this.referenceCitiesPartOne = referenceCities
+    this.referenceCitiesPartTwo = partTwo
+  },
+  data() {
+    return {
+      referenceCitiesPartOne: [],
+      referenceCitiesPartTwo: []
+    }
+  }
+}
 </script>
 
 <style></style>
