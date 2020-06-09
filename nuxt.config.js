@@ -54,7 +54,7 @@ export default {
                 content: process.env.npm_package_description || ''
             }
         ],
-        link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+        link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
     },
     /*
      ** Customize the progress-bar color
@@ -165,12 +165,12 @@ export default {
     markdownit: {
         preset: 'default',
         linkify: true,
-        breaks: true,
+        breaks: false,
         injected: true
     },
     pwa: {
         icon: {
-            iconSrc: '~/assets/img/icon.png'
+            iconSrc: '~/assets/img/colivme-icon.jpg'
         }
     },
     responsiveLoader: {

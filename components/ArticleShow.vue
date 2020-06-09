@@ -54,7 +54,7 @@
           </div>
         </div>
       </div>
-      <div class="text-gray-700 text-base break-normal py-4 leading-loose lazyload" v-html="$md.render(article.content)"></div>
+      <div class="whitespace-pre-line text-gray-700 text-base break-normal py-4 leading-loose lazyload" v-html="$md.render(article.content)"></div>
     </section>
 
     <!-- <div class="flex justify-center items-end my-4">
