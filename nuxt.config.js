@@ -165,7 +165,7 @@ export default {
     markdownit: {
         preset: 'default',
         linkify: true,
-        breaks: false,
+        breaks: true,
         injected: true
     },
     pwa: {

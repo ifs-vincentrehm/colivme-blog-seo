@@ -54,7 +54,7 @@
           </div>
         </div>
       </div>
-      <div class="whitespace-pre-line text-gray-700 text-base break-normal py-4 leading-loose lazyload" v-html="$md.render(article.content)"></div>
+      <div id="article-content" class="whitespace-pre-line text-gray-700 text-base break-normal py-4 lazyload" v-html="$md.render(article.content)"></div>
     </section>
 
     <!-- <div class="flex justify-center items-end my-4">
@@ -86,4 +86,24 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+#article-content > ul {
+  @apply list-disc list-outside;
+}
+
+#article-content > h1 {
+  @apply text-2xl;
+}
+
+#article-content > h2 {
+  @apply text-xl;
+}
+
+#article-content > h3 {
+  @apply text-lg;
+}
+
+#article-content > p > a {
+  @apply shadow-sm inline-flex items-center justify-center px-6 py-3 border border-transparent text-lg leading-6 font-medium w-auto rounded-full text-white bg-blue-900 transition ease-in-out duration-150;
+}
+</style>
