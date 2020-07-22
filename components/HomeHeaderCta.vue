@@ -23,7 +23,6 @@
 export default {
   data() {
     return {
-      assetsBaseUrl: process.env.assetsBaseUrl,
       desktopPath: require('~/assets/img/header-desktop.jpg').srcSet,
       mobilePath: require('~/assets/img/header-mobile.jpg').srcSet,
       desktopPlaceHolder: require('~/assets/img/header-desktop.jpg').placeholder,
@@ -47,7 +46,7 @@ export default {
       const results = []
       for (let index = 0; index < urls.length; index++) {
         const element = urls[index]
-        results.push(this.assetsBaseUrl + element)
+        results.push(element)
       }
       const result = results.join(', ')
       return result
