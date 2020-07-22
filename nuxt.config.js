@@ -31,7 +31,7 @@ export default {
             })
         }
     },
-    mode: 'universal',
+    mode: 'spa',
     target: 'static',
     server: {
         host: (process.env.MODE === 'production' || process.env.NODE_ENV === 'production') ? '0.0.0.0' : 'localhost', // default: localhost
