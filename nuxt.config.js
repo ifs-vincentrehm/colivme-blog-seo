@@ -1,37 +1,37 @@
 /* eslint-disable prettier/prettier */
 
-// import axios from 'axios'
+import axios from 'axios'
 require('dotenv').config()
 
-// const baseURL = process.env.BACKEND_URL
+const baseURL = process.env.BACKEND_URL
 
 export default {
-    // generate: {
-    //     routes() {
-    //         const articles = axios.get(baseURL + '/articles').then((res) => {
-    //             return res.data.map((article) => {
-    //                 return {
-    //                     route: '/articles/' + article.slug,
-    //                     payload: article
-    //                 }
-    //             })
-    //         })
+    generate: {
+        routes() {
+            const articles = axios.get(baseURL + '/articles').then((res) => {
+                return res.data.map((article) => {
+                    return {
+                        route: '/articles/' + article.slug,
+                        payload: article
+                    }
+                })
+            })
 
-    //         const categories = axios.get(baseURL + '/categories').then((res) => {
-    //             return res.data.map((category) => {
-    //                 return {
-    //                     route: '/categories/' + category.slug,
-    //                     payload: category
-    //                 }
-    //             })
-    //         })
+            const categories = axios.get(baseURL + '/categories').then((res) => {
+                return res.data.map((category) => {
+                    return {
+                        route: '/categories/' + category.slug,
+                        payload: category
+                    }
+                })
+            })
 
-    //         return Promise.all([articles, categories]).then((values) => {
-    //             return [...values[0], ...values[1]]
-    //         })
-    //     }
-    // },
-    mode: 'spa',
+            return Promise.all([articles, categories]).then((values) => {
+                return [...values[0], ...values[1]]
+            })
+        }
+    },
+    mode: 'universal',
     target: 'static',
     server: {
         host: (process.env.MODE === 'production' || process.env.NODE_ENV === 'production') ? '0.0.0.0' : 'localhost', // default: localhost
