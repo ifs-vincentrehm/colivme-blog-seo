@@ -39,7 +39,7 @@ export default {
     },
     publicRuntimeConfig: {
         baseURL: process.env.BACKEND_URL,
-        token: process.env.TOKEN
+        t: process.env.TOKEN
     },
     privateRuntimeConfig: {
     },    
