@@ -1,8 +1,6 @@
 /* eslint-disable prettier/prettier */
 
 import axios from 'axios'
-require('dotenv').config()
-
 const baseURL = process.env.BACKEND_URL
 
 export default {
@@ -31,16 +29,20 @@ export default {
             })
         }
     },
-    mode: 'universal',
+    mode: 'spa',
     target: 'static',
     server: {
         host: (process.env.MODE === 'production' || process.env.NODE_ENV === 'production') ? '0.0.0.0' : 'localhost', // default: localhost
         port: 3000 // default: 3000
     },
     env: {
-        assetsBaseUrl: (process.env.NODE_ENV === 'production' || process.env.STATIC) ?
-            'https://static.lescompagnonsducode.fr' : ''
     },
+    publicRuntimeConfig: {
+        baseURL: process.env.BACKEND_URL,
+        t: process.env.TOKEN
+    },
+    privateRuntimeConfig: {
+    },    
     /*
      ** Headers of the page
      */
@@ -86,7 +88,7 @@ export default {
         // Doc: https://github.com/Developmint/nuxt-webfontloader
         'nuxt-webfontloader',
         // Doc: https://github.com/nuxt-community/dotenv-module
-        '@nuxtjs/dotenv',
+        // '@nuxtjs/dotenv',
         // Doc: https://github.com/nuxt-community/svg-module
         // '@nuxtjs/svg', // incompatible with nuxt-responsive-loader
         // Doc: https://github.com/geeogi/nuxt-responsive-loader#readme

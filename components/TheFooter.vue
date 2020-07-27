@@ -128,7 +128,8 @@ export default {
     FooterLink
   },
   async fetch() {
-    const config = { headers: { 'x-api-key': process.env.TOKEN } }
+    const { t } = this.$nuxt.$config
+    const config = { headers: { 'x-api-key': t } }
 
     const {
       data: { referenceCities }
