@@ -46,7 +46,7 @@
         "husky": "^4.0.0",
         "lazysizes": "^5.2.2",
         "lint-staged": "^10.2.11",
-        "nuxt-cookie-control": "^1.8.6",
+        "nuxt-cookie-control": "^1.9.93",
         "nuxt-purgecss": "^1.0.0",
         "nuxt-responsive-loader": "^2.0.1",
         "nuxt-social-meta": "0.0.5",
